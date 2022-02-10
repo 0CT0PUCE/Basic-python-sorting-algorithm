@@ -2,20 +2,20 @@ import os, shutil
 import tkinter as tk
 from tkinter import *
 
-directorya = r"C:\Users\soren\Documents\png"
-dirpng = r"D:\ARCHIVES\Photo"
-dirmp4 = r"D:\ARCHIVES\video"
-direv3 = r"D:\ARCHIVES\EV3"
-dirlego = r"D:\ARCHIVES\LEGO\lego_digital_designer"
-dirmc = r"D:\ARCHIVES\Minecraft"
-dirmus = r"D:\ARCHIVES\Music"
-dirscra = r"D:\ARCHIVES\Scratch"
-bin = r"C:\Users\soren\Desktop\bin"
-dirmkv = r"D:\ARCHIVES\Film"
-dirdoc = r"D:\ARCHIVES\cours"
-dirzip = r"D:\ARCHIVES\Zip"
-direxe = r"D:\ARCHIVES\Computer_stuff"
-dirpy = r"D:\ARCHIVES\Computer_stuff\ATOM"
+directorya = r"path/to/png"
+dirpng = r"path/to/Photo"
+dirmp4 = r"path/to/video"
+direv3 = r"path/to/EV3"
+dirlego = r"path/to/lego_digital_designer"
+dirmc = r"path/to/Minecraft"
+dirmus = r"path/to/Music"
+dirscra = r"path/to/Scratch"
+bin = r"path/to/bin"
+dirmkv = r"path/to/Film"
+dirdoc = r"path/to/cours"
+dirzip = r"path/to/Zip"
+direxe = r"path/to/Computer_stuff"
+dirpy = r"path/to/python"
 
 moved = 0
 deleted = 0
@@ -36,7 +36,7 @@ directorya = txt.get()
 
 def sort():
     directorya = txt.get()
-    lbl = Label(window, text="Votre vidéo :" + txt.get() + "est en cours de téléchargement")
+    lbl = Label(window, text="Votre vidéo :" + txt.get() + "")
     txt.delete(0, END)
     folders = [folder for folder in os.listdir(directorya) if os.path.isdir(os.path.join(directorya, folder))]
     files = [file for file in os.listdir(directorya) if os.path.isfile(os.path.join(directorya, file))]
